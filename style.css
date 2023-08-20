@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;500;600;700;800&family=Poppins&family=Zeyada&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  'Poppins', sans-serif;
+}
+
+.container {
+    background-color: #668cff;
+    width: 100%;
+    min-height: 100vh;
+    padding: 10%;
+}
+
+.todo {
+    width: 30%;
+    height: 500px;
+    margin: auto;
+    background-color: aliceblue;
+    border-radius: 10px ;
+}
+
+.todo_img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.todo h2 {
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color:rgb(219, 216, 216);
+    border-radius: 10px;
+    padding-left: 30px;
+    margin: 0px 10px ;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 24px;
+    
+
+}
+
+button {
+    border: none;
+    outline: none;
+    background: #668cff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px ;
+    padding: 10px 10px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 20px;
+    user-select: none;
+    padding: 12px 8px 15px 50px;
+    cursor: pointer;
+     position: relative;
+}
+
+
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 14px;
+  left: 20px;
+
+}
+
+.checked {
+    text-decoration: line-through;
+    color:#555
+}
+
+.checked::before{
+    background-image: url(images/checked.png);
+     background-size: 30px;
+}
+ 
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    color : #555;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background-color:#edeef0;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .todo {
+        width: 80%;
+        height: 500px;
+    }
+} 
